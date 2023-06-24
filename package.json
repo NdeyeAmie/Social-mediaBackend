@@ -21,5 +21,5 @@
     "nodemon": "^2.0.22",
     "path": "^0.12.7"
   },
-  "proxy": "https://zippy-zabaione-37dad2.netlify.app/api"
+  "proxy": "http://localhost:8800/api"
 }
