@@ -2,17 +2,17 @@ const router = require("express").Router();
 const User = require("../models/User")
 const bcrypt = require("bcrypt");
 
-// router.get("/",async (req, res)=>{
-//              const query = req.query.new
-//              try {
-//              const users = query   
-//              ? await User.find().sort({_id: -1}).limit(5)
-//               : await User.find();
-//              res.status(200).json(users);
-//              } catch (err) {
-//                 res.status(500).json(err)
-//              }
-//              });
+router.get("/",async (req, res)=>{
+             const query = req.query.new
+             try {
+             const users = query   
+             ? await User.find().sort({_id: -1}).limit(5)
+              : await User.find();
+             res.status(200).json(users);
+             } catch (err) {
+                res.status(500).json(err)
+             }
+             });
 
 //update user
 router.put("/:id", async (req, res) => {

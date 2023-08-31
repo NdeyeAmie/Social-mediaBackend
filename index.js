@@ -9,6 +9,7 @@ const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
 const conversationRoute = require("./routes/conversations");
 const messageRoute = require("./routes/messages");
+const commentaireRoute = require('./routes/commentaires')
 const multer = require("multer");
 const path = require("path");
 
@@ -52,7 +53,8 @@ app.use("/api/users", userRoute);
 app.use("/api/posts/", postRoute);
 app.use("/api/conversations", conversationRoute);
 app.use("/api/messages", messageRoute);
- 
+app.use("/api/commentaires", commentaireRoute);
+
 //demarrer le serveur
 const port = process.env.PORT || 8800
 app.listen(port, () => {
